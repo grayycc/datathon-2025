@@ -1,0 +1,15 @@
+# Python virtual envs (common names)
+.venv/
+venv/
+env/
+.conda/
+.mamba/
+# Pipenv/Poetry caches (optional)
+pip-wheel-metadata/
+.poetry/
+# Bytecode & build
+__pycache__/
+*.pyc
+.build/
+dist/
+*.egg-info/
