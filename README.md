@@ -12,8 +12,6 @@
 
 ## 🔗 Table of Contents
 ### • [Why this project?](#-why-this-project)  
-### • [Project structure](#-project-structure)  
-### • [Quickstart](#-quickstart)  
 ### • [Modeling approach](#-modeling-approach)  
 ### • [Hyperparameter tuning](#-hyperparameter-tuning)  
 ### • [Log target & smearing](#-log-target--smearing)  
@@ -23,8 +21,6 @@
 ### • [Fairness slices & recommendations](#-fairness-slices--recommendations)  
 ### • [Reproducibility & seeds](#-reproducibility--seeds)  
 ### • [Common errors & fixes](#-common-errors--fixes)  
-### • [FAQs](#-faqs)  
-### • [License](#-license)
 
 ---
 
