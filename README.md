@@ -61,18 +61,24 @@ Recommended amount:
 2. Random Forest: n_iter ≈ 30–60 (RF is less sensitive than boosting)
 
 ### 📈 Log target & smearing
- **We train on log(charges) to stabilize variance. To go back to dollars without bias, apply Duan smearing:
+ ##### We train on log(charges) to stabilize variance. To go back to dollars without bias, apply Duan smearing:
 
-- Train residuals (log scale): e_i = y_log_true - y_log_pred
-- Smearing factor: S = mean(exp(e_i))
-- Back-transform: ŷ_$ = exp(ŷ_log) * S
-- We also support per-group smearing (e.g., by sex) to reduce subgroup bias if residual distributions differ.
+- **Train residuals (log scale):**  
+  \( e_i = y_{\text{log,true}} - y_{\text{log,pred}} \)
+
+- **Smearing factor:**  
+  \( S = \text{mean}(e^{e_i}) \)
+
+- **Back-transform to dollar scale:**  
+  \( \hat{y}_{\$} = e^{\hat{y}_{\text{log}}} \times S \)
+
+- **Note:** Per-group smearing (e.g., by sex) can be applied to reduce subgroup bias if residual distributions differ.
 
 ### 📊 Evaluation metrics (business-friendly)
- **MAE — average absolute error in dollars; easy to interpret (“typical error per policy”).
- **RMSE — penalizes big misses; good for risk control.
- **R² — share of variance explained; high-level goodness of fit.
- **MAPE — relative error (%); highlights performance on low-charge cases.
+ #### MAE — average absolute error in dollars; easy to interpret (“typical error per policy”).
+ #### RMSE — penalizes big misses; good for risk control.
+ #### R² — share of variance explained; high-level goodness of fit.
+ #### MAPE — relative error (%); highlights performance on low-charge cases.
 
 For pricing ops, we typically headline MAE (and optionally WAPE), with RMSE and MAPE as supporting evidence.
 
