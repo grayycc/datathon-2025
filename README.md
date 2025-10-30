@@ -7,7 +7,6 @@
 - **Presentation-ready visuals** (parity plots, MAE by segment)
 - **Sensitivity analysis** (what moves predictions & by how much)
 - **Fairness slicing** (MAE by Sex / Region / Children)
-- **Copy-paste-ready code** and **troubleshooting**
 
 ---
 
