@@ -110,11 +110,11 @@ Policy granularity: deductible, co-pay, plan tier → aligns premiums with benef
 
 ### 🛠️ Common errors & fixes
 
-1. ImportError: cannot import name BayesSearchCV from sklearn.model_selection Use from skopt import BayesSearchCV (it’s in scikit-optimize, not sklearn).
-2. Import 'skopt.space' could not be resolved pip install -U scikit-optimize
-3. XGBoost categorical error If using a pandas DataFrame with object dtypes directly in xgboost.DMatrix, you’ll get Invalid columns: ... object. Fix: OHE in a ColumnTransformer (as in this repo), or enable_categorical=True with pandas Categorical.
+1. `ImportError: cannot import name BayesSearchCV from sklearn.model_selection` Use from skopt import BayesSearchCV (it’s in `scikit-optimize`, not `sklearn`).
+2. `Import 'skopt.space'` could not be resolved `pip install -U scikit-optimize`
+3. `XGBoost categorical error` If using a pandas DataFrame with `object` dtypes directly in `xgboost.DMatrix`, you’ll get `Invalid columns: ...` object. Fix: OHE in a ColumnTransformer (as in this repo), or `enable_categorical=True` with pandas Categorical.
 4. Duan smearing makes MAE worse Smearing corrects mean bias on the dollar scale; it can reduce RMSE but sometimes increase MAE. Keep both reported; choose the KPI that matches business priorities.
-5. Pillow _imaging arch mismatch on Apple Silicon Reinstall for arm64 wheel: pip uninstall pillow && pip install --no-binary=:all: pillow or use pip install --upgrade --force-reinstall pillow in a arm64 Python.
-6. Git pull overwrote local work Use feature branches; when in doubt: git stash → git pull → resolve → git stash pop. For PRs: push your branch, open compare main....
+5. Pillow `_imaging` arch mismatch on Apple Silicon Reinstall for arm64 wheel: `pip uninstall pillow && pip install --no-binary=:all: pillow` or use `pip install --upgrade --force-reinstall pillow` in a arm64 Python.
+6. Git pull overwrote local work Use feature branches; when in doubt: `git stash` → `git pull` → `resolve` → `git stash pop`. For PRs: push your branch, open `compare main....`
 
 
