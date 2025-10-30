@@ -1,5 +1,4 @@
-# Create README.md with the markdown content (retry)
-content = """## 🏎️💡 Team XData -- Insurance Charges ML-based Predictions
+# 🏎️💡 Team XData -- Insurance Charges ML-based Predictions
 
 ### End-to-end repo for predicting **health insurance charges** with:
 - **XGBoost** (gradient boosting) + **Bayesian hyperparameter tuning** (`BayesSearchCV`)
